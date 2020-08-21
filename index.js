@@ -5,7 +5,7 @@ const htmlToText = require('html-to-text');
 module.exports = async (sk, tk, text) => {
     let driver = await new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().headless()).build()
 
-    const textEncoded = encodeURI(text)
+    const textEncoded = encodeURIComponent(text.replace(/&/g, '%amp'))
     await driver.get(`https://papago.naver.com/?sk=${sk}&tk=${tk}&st=${textEncoded}`)
     await driver.wait(until.elementLocated(By.xpath('//div[@id="txtTarget"]')), 10 * 1000)
 

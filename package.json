@@ -1,6 +1,6 @@
 {
   "name": "selenium-papago-scraping",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "selenium-papago-scraping is a tool to get Papago translations by scraping using selenium without using the Papago API.",
   "keywords": [
     "papgo",
